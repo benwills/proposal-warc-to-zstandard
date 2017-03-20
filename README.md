@@ -127,7 +127,7 @@ Level 22	|	2960s, 894ms	|	735,042,474
 
 Clearly, there is a computational threshold that makes sense for a project like the Common Crawl to stay under at the compression process. But these numbers should be useful for refernce when comparing to Gzip, which I expect to be somewhere around Compression Level 8 for Zstandard.
 
-If that compression time is similar it would offer about 17% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to saving WARC files 8 days faster.
+If that compression time is similar it would offer about 17% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to saving the 2017.02 Common Crawl WARC files 8 days faster.
 
 ## Next Steps
 
