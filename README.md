@@ -34,7 +34,7 @@ Compressing as separate blocks allows you to keep data compressed on disk, while
 
 > {"urlkey": "org,archive)/", "timestamp": "20170219162823", "status": "301", "url": "http://archive.org/", "filename": "crawl-data/CC-MAIN-2017-09/segments/1487501170186.50/crawldiagnostics/CC-MAIN-20170219104610-00544-ip-10-171-10-108.ec2.internal.warc.gz", "length": "534", "mime": "text/html", "offset": "517355", "digest": "3I42H3S6NNFQ2MSVX7XZKYAYSCX5QBYJ"}
 
-In this JSON object, the full html is referenced as:
+In this JSON object, the full HTTP response and WARC headers are referenced as:
 * filename:
   * crawl-data/CC-MAIN-2017-09/segments/1487501170186.50/crawldiagnostics/CC-MAIN-20170219104610-00544-ip-10-171-10-108.ec2.internal.warc.gz
 * offset:
