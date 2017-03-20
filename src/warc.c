@@ -338,7 +338,7 @@ warc_zstd_write_files(warc_st *warc)
 {
 	FILE  *fp  = NULL;
 	size_t byt = 0;
-	int	ret = 0;
+	int	   ret = 0;
 
 	//----------------------------------
 	if (DBG)print_header("Writing zstd-compressed warc zst "
