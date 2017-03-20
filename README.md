@@ -127,15 +127,15 @@ Level 22	|	2960s, 894ms	|	735,042,474
 
 Clearly, there is a computational threshold that makes sense for a project like the Common Crawl to stay under at the compression process. But these numbers should be useful for refernce when comparing to Gzip, which I expect to be somewhere around Compression Level 8 for Zstandard.
 
-If that compression time is similar it would offer about 17% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to downloading more than 8 days faster.
+If that compression time is similar it would offer about 17% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to saving WARC files 8 days faster.
 
 ## Next Steps
 
-The intent of this research is to propose Zstandard as a possible recommendation for more efficiently compressing WARC/WET/WAT files.
+The intent of this research is to propose Zstandard as a recommendation for more efficiently compressing WARC/WET/WAT files.
 
 The code in this repository was not intended for use by anyone else, though I'm making it publicly available. If it makes sense to pursue this further, I'm happy to design more robust testing processes and code, including allowing for them to be more portable and run by others.
 
-I will reference [this post on the Common Crawl Group](https://groups.google.com/forum/?hl=en#!topic/common-crawl/bO6B6xQJnEE) as a place to dicuss what this might look like moving forward.
+Refer to [this post on the Common Crawl Group](https://groups.google.com/forum/?hl=en#!topic/common-crawl/bO6B6xQJnEE) for discussing what this might look like moving forward.
 
 ---
 
