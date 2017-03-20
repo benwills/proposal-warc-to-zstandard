@@ -1,0 +1,1236 @@
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 969729191
+	LEVEL: 1
+	TIME : 17s, 217ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 969729191
+ZSTD file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 932530477
+	LEVEL: 2
+	TIME : 24s, 198ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 932530477
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 892326602
+	LEVEL: 3
+	TIME : 40s, 724ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 892326602
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 890282159
+	LEVEL: 4
+	TIME : 77s, 575ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 890282159
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 849449579
+	LEVEL: 5
+	TIME : 65s, 457ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 849449579
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 825325823
+	LEVEL: 6
+	TIME : 121s, 980ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 825325823
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 812392350
+	LEVEL: 7
+	TIME : 177s, 764ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 812392350
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 800435404
+	LEVEL: 8
+	TIME : 225s, 305ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 800435404
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 795902253
+	LEVEL: 9
+	TIME : 277s, 780ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 795902253
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 791670426
+	LEVEL: 10
+	TIME : 315s, 916ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 791670426
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 789060640
+	LEVEL: 11
+	TIME : 477s, 254ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 789060640
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 785789248
+	LEVEL: 12
+	TIME : 511s, 414ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 785789248
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 783608901
+	LEVEL: 13
+	TIME : 620s, 656ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 783608901
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 781443804
+	LEVEL: 14
+	TIME : 720s, 792ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 781443804
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 775446236
+	LEVEL: 15
+	TIME : 825s, 927ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 775446236
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 772099885
+	LEVEL: 16
+	TIME : 1131s, 729ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 772099885
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 768755082
+	LEVEL: 17
+	TIME : 1116s, 361ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 768755082
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 757769728
+	LEVEL: 18
+	TIME : 1631s, 792ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 757769728
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 743957209
+	LEVEL: 19
+	TIME : 1922s, 710ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 743957209
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 740306436
+	LEVEL: 20
+	TIME : 1977s, 620ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 740306436
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 735544787
+	LEVEL: 21
+	TIME : 2576s, 578ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 735544787
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+================================================================
+================================================================
+================================================================
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : /media/src/c/common_crawl/dat/CC-MAIN-20170219104609-00001-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4551555131
+	ZSTD : 735042474
+	LEVEL: 22
+	TIME : 2960s, 894ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+Decompression time: 
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+	Original Size: 4551555131
+	New      Size: 4551555131
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+	Original SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+	New      SHA-1: fad5c150ab700d802dac6f842ad8b07619e3cbbc
+SUCCESS: Hashes are equal: 
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+	gzip: 949865238
+	zstd: 735042474
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+

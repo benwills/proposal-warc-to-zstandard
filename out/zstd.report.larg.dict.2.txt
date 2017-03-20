@@ -1,0 +1,1142 @@
+$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: {1..10}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: {1..10}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: {ZSTD_LEVEL_MIN..ZSTD_LEVEL_MAX}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: 1
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: {1..10}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+./test.sh: line 83: 1: command not found
+./test.sh: line 83: 10: command not found
+
+
+================================================================
+
+
+ZSTD_LEVEL: {..}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: {1..10}
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: 1
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+^C
+o@xub:/media/src/c/common_crawl/sh$ ./test.sh
+
+################################################################
+
+inc.sh VARS:
+
+	WARC_URL:          commoncrawl.s3.amazonaws.com/crawl-data/CC-MAIN-2017-09/segments/1487501174157.36/warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_FILE:         CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	ZSTD_LEVEL_MIN:    1
+	ZSTD_LEVEL_MAX:    10
+
+	APP_DIR_SRC:       ../src/
+	APP_DIR_BIN:       ../bin/
+	APP_DIR_OUT:       ../out/
+	APP_BIN:           ../bin/cc_warc
+
+	DICT_DIR:          ../dict/
+	DICT_SEED_DIR:     ../dict/seed/
+	DICT_FILE:         zstd.warc.dict
+	DICT_SEED_GZ:      dict.seed.gz
+
+	WARC_DIR:          ../warc/
+	WARC_GZ_DIR:       ../warc_gz/
+	WARC_ZST_DIR:      ../warc_zst/
+	WARC_ZST_DAT_DIR:  ../warc_zst_dat/
+	WARC_ZST_WARC_DIR: ../warc_zst_warc/
+
+	DICT:              ../dict/zstd.warc.dict
+	WARC:              ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+
+	WARC_GZ:           ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.gz
+	WARC_ZST:          ../warc_zst/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst
+	WARC_ZST_DAT:      ../warc_zst_dat/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.dat
+	WARC_ZST_WARC:     ../warc_gz/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc.zst.warc
+
+################################################################
+
+
+gcc -c -Wall -g main.c -o main.o -L/usr/local/lib -lzstd
+gcc main.o -o cc_warc -L/usr/local/lib -lzstd
+mv cc_warc ../bin
+rm -f *.o
+
+
+================================================================
+
+
+ZSTD_LEVEL: 1
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 978086449
+	LEVEL: 1
+	TIME : 16s, 889ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m9.373s
+user	0m5.232s
+sys	0m2.212s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 978086449
+ZSTD file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 2
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 934386565
+	LEVEL: 2
+	TIME : 24s, 64ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m11.045s
+user	0m5.880s
+sys	0m2.348s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 934386565
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 3
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 891392100
+	LEVEL: 3
+	TIME : 39s, 746ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m10.609s
+user	0m6.216s
+sys	0m2.192s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 891392100
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 4
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 886041559
+	LEVEL: 4
+	TIME : 77s, 937ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m13.830s
+user	0m7.228s
+sys	0m2.200s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 886041559
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 5
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 846423575
+	LEVEL: 5
+	TIME : 60s, 609ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m11.365s
+user	0m6.504s
+sys	0m2.088s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 846423575
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 6
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 821030832
+	LEVEL: 6
+	TIME : 111s, 780ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m10.967s
+user	0m6.524s
+sys	0m2.160s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 821030832
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 7
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 807131544
+	LEVEL: 7
+	TIME : 162s, 490ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m11.113s
+user	0m6.520s
+sys	0m2.188s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 807131544
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 8
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 793764785
+	LEVEL: 8
+	TIME : 189s, 785ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m11.569s
+user	0m6.604s
+sys	0m2.128s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 793764785
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 9
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 788293964
+	LEVEL: 9
+	TIME : 326s, 715ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m13.496s
+user	0m7.828s
+sys	0m2.680s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 788293964
+GZIP file is LARGER.
+
+
+
+
+
+
+
+
+
+
+================================================================
+
+
+ZSTD_LEVEL: 10
+
+
+
+----------------------------------------------------------------
+Running draft C code to properly compress WARC files with ZSTD...
+
+
+----------------------------------------------------
+
+Completed zstd compression:
+
+	FILE : ../warc/CC-MAIN-20170219104614-00154-ip-10-171-10-108.ec2.internal.warc
+	SIZE : 4547945819
+	ZSTD : 784114137
+	LEVEL: 10
+	TIME : 374s, 114ms
+
+zstd C compression code is finished.
+
+
+----------------------------------------------------------------
+Decompressing...
+
+
+real	0m11.883s
+user	0m6.816s
+sys	0m2.352s
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed file sizes...
+
+	Original Size: 4547945819
+	New      Size: 4547945819
+SUCCESS: Filesizes are equal
+
+
+----------------------------------------------------------------
+Checking original and newly-decompressed SHA-1 hashes...
+
+	Original SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+	New      SHA-1: d00af3007e565306a34b36617474040b4a6edadf
+SUCCESS: Hashes are equal:
+
+
+----------------------------------------------------------------
+Checking gzip vs zstd file sizes...
+
+	gzip: 959016011
+	zstd: 784114137
+GZIP file is LARGER.
+
+
+
+
+
+
+
