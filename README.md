@@ -91,7 +91,7 @@ The two factors that make Zstandard tunable for the WARC use case are:
 
 The practical runtime considerations here are:
 
-1) For dictionary files, it makes sense to test with as large of a data set as you can across an entire corpus. (e.g. all of Common Crawl's 2017.02 set vs. a separate dictionary for each file).
+1) For dictionary files, it makes sense to train with as large of a data set as you can across an entire corpus. (e.g. all of Common Crawl's 2017.02 set vs. a separate dictionary for each file).
 	* The training is quite fast. With 2.5 GB of WARC samples across 19,712 files, it took only about 45 minutes.
 	* Setting a larger ```--maxdict``` size also helps.
 
