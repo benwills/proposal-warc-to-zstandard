@@ -1,7 +1,5 @@
 # WARC: Gzip to Zstandard Compression Proposal
 
----
-
 ## Problem
 
 The [Common Crawl](http://commoncrawl.org/) is a regularly-published collection of billions of HTML documents, HTML link data, and HTML text data.
