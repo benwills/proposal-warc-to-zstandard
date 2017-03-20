@@ -306,9 +306,9 @@ warc_zstd_compress(warc_st *warc)
 							  u->response.pos, u->response.byt);
 		z->response.off = z_off;
 		z->response.byt = z_wrt;
-		z_off         += z_wrt;
-		z_buf         += z_wrt;
-		z_lft         -= z_wrt;
+		z_off          += z_wrt;
+		z_buf          += z_wrt;
+		z_lft          -= z_wrt;
 
 		//------------------------------
 		// finally, the metadata
@@ -316,9 +316,9 @@ warc_zstd_compress(warc_st *warc)
 							  u->metadata.pos, u->metadata.byt);
 		z->metadata.off = z_off;
 		z->metadata.byt = z_wrt;
-		z_off         += z_wrt;
-		z_buf         += z_wrt;
-		z_lft         -= z_wrt;
+		z_off          += z_wrt;
+		z_buf          += z_wrt;
+		z_lft          -= z_wrt;
 	}
 
 	warc->zstd.out.byt = z_off;
