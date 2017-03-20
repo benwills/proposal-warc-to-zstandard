@@ -56,6 +56,12 @@ In my testing, of which there is more data further below, I was able to achive a
 
 This is about 82.7% of the Gzipped size. Using Zstandard's compression level of 8, it took about 3 minutes and 20 seconds on an Intel i3-4130 CPU @ 3.40GHz, while creating a new compression block for each "WARC-Type" of request, response, and metadata. Further compression should be achievable if those three WARC Types should actually be compressed in one block.
 
+Zstandard reference links, from least to most technical:
+* [https://github.com/facebook/zstd](https://github.com/facebook/zstd)
+* [http://facebook.github.io/zstd/](http://facebook.github.io/zstd/)
+* [http://facebook.github.io/zstd/zstd_manual.html](http://facebook.github.io/zstd/zstd_manual.html)
+* [https://github.com/facebook/zstd/blob/dev/doc/zstd_compression_format.md](https://github.com/facebook/zstd/blob/dev/doc/zstd_compression_format.md)
+
 ## Compression Dictionary
 
 This was achieved through the use of a dictionary feature that comes with Zstandard.
