@@ -17,10 +17,10 @@ void
 print_flush(const char *fmt, ...)
 {
 	printf("\n");
-    va_list argptr;
-    va_start(argptr, fmt);
-    vprintf (fmt, argptr);
-    va_end  (argptr);
+	va_list argptr;
+	va_start(argptr, fmt);
+	vprintf (fmt, argptr);
+	va_end  (argptr);
 	fflush  (stdout);
 }
 
@@ -29,11 +29,11 @@ void
 print_header(const char *fmt, ...)
 {
 	printf("\n\n================================"
-	           "================================\n");
-    va_list argptr;
-    va_start(argptr, fmt);
-    vprintf (fmt, argptr);
-    va_end  (argptr);
+		   "================================\n");
+	va_list argptr;
+	va_start(argptr, fmt);
+	vprintf (fmt, argptr);
+	va_end  (argptr);
 	fflush  (stdout);
 }
 
@@ -55,23 +55,23 @@ warc_setup(warc_st *warc)
 	char *fnm_base = basename(warc->filename);
 
 	// create our .zst filename
-    if (strlen(fnm_base + strlen(".zst")) > PATH_MAX)
-    	ERR_DIE("Filename too long for .zst extension. Check PATH_MAX")
-    sprintf(warc->zstd.filename.zst, "%s%s.zst", DIR_ZST, fnm_base);
+	if (strlen(fnm_base + strlen(".zst")) > PATH_MAX)
+		ERR_DIE("Filename too long for .zst extension. Check PATH_MAX")
+	sprintf(warc->zstd.filename.zst, "%s%s.zst", DIR_ZST, fnm_base);
 
 	// create our .zst.dat filename
-    if (strlen(fnm_base + strlen(".zst.dat")) > PATH_MAX)
-    	ERR_DIE("Filename too long for .zst.dat extension. Check PATH_MAX")
-    sprintf(warc->zstd.filename.dat, "%s%s.zst.dat", DIR_ZST_DAT, fnm_base);
+	if (strlen(fnm_base + strlen(".zst.dat")) > PATH_MAX)
+		ERR_DIE("Filename too long for .zst.dat extension. Check PATH_MAX")
+	sprintf(warc->zstd.filename.dat, "%s%s.zst.dat", DIR_ZST_DAT, fnm_base);
 
 	// load a zstd dictionary, if applicable
-    if (1 == warc->zstd.dict.use)
-    	zstd_c_dict_load(warc);
+	if (1 == warc->zstd.dict.use)
+		zstd_c_dict_load(warc);
 
-    // now map our input file to memory
+	// now map our input file to memory
 	mmap_ini(&warc->file, warc->filename);
 
-    if (DBG)mmap_print(&warc->file);
+	if (DBG)mmap_print(&warc->file);
 
 	if (DBG)print_flush("Done\n");
 
@@ -105,20 +105,20 @@ warc_analyze(warc_st *warc)
 
 	// this should be the first bytes of the document and match exactly
 	if (0 != memcmp(pos, WARC_STR_BEG_NFO, strlen(WARC_STR_BEG_NFO)))
-    	ERR_DIE("WARC File: Invalid warcinfo position:");
+		ERR_DIE("WARC File: Invalid warcinfo position:");
 
-    // order is important for do{...}while();
-    // need to do this, then jump in...
+	// order is important for do{...}while();
+	// need to do this, then jump in...
 
 	t_c = memmem(pos, lft, WARC_STR_BEG_REQ, strlen(WARC_STR_BEG_REQ));
 	if (NULL == t_c)
-    	ERR_DIE("WARC File: Invalid warcinfo->request position:");
+		ERR_DIE("WARC File: Invalid warcinfo->request position:");
 
-    t_b = (size_t)((ptrdiff_t)(t_c - pos));
+	t_b = (size_t)((ptrdiff_t)(t_c - pos));
 	warc->dat.doc.warcinfo.byt = t_b;
 	byt += t_b;
 	lft -= t_b;
-    warc->dat.doc.warcinfo.pos = pos;
+	warc->dat.doc.warcinfo.pos = pos;
 	pos  = t_c;
 
 
@@ -147,32 +147,32 @@ warc_analyze(warc_st *warc)
 
 		t_c = memmem(pos, lft, WARC_STR_BEG_RSP, strlen(WARC_STR_BEG_RSP));
 		if (NULL == t_c)
-	    	ERR_DIE("WARC File: Invalid request->response position");
+			ERR_DIE("WARC File: Invalid request->response position");
 
-	    t_b = (size_t)((ptrdiff_t)(t_c - pos));
+		t_b = (size_t)((ptrdiff_t)(t_c - pos));
 		uri->request.byt = t_b;
 		byt += t_b;
 		lft -= t_b;
-	    uri->request.pos = pos;
+		uri->request.pos = pos;
 		pos  = t_c;
 
 		//----------------------------------------------------------
 		// set uri (since we now have request block size)
-	    // !!! don't change (byt|lft|pos) here
+		// !!! don't change (byt|lft|pos) here
 
 		t_c = memmem(uri->request.pos, uri->request.byt,
-		             WARC_STR_HDR_URI, strlen(WARC_STR_HDR_URI));
+					 WARC_STR_HDR_URI, strlen(WARC_STR_HDR_URI));
 		if (NULL == t_c)
-	    	ERR_DIE("WARC File: Invalid request->uri position");
+			ERR_DIE("WARC File: Invalid request->uri position");
 
-	    // set our uri position.
-	    uri->uri.pos = t_c;
-	    // then move to end of the line
-	    t_c += strcspn(t_c, "\r\n");
-	    // then calculate our uri's byte length
-	    t_b = (size_t)((ptrdiff_t)(t_c - (char*)uri->uri.pos));
+		// set our uri position.
+		uri->uri.pos = t_c;
+		// then move to end of the line
+		t_c += strcspn(t_c, "\r\n");
+		// then calculate our uri's byte length
+		t_b = (size_t)((ptrdiff_t)(t_c - (char*)uri->uri.pos));
 		if (0 == t_b)
-	    	ERR_DIE("WARC File: Invalid uri length");
+			ERR_DIE("WARC File: Invalid uri length");
 		uri->uri.byt = t_b;
 
 		//----------------------------------------------------------
@@ -180,13 +180,13 @@ warc_analyze(warc_st *warc)
 
 		t_c = memmem(pos, lft, WARC_STR_BEG_MTA, strlen(WARC_STR_BEG_MTA));
 		if (NULL == t_c)
-	    	ERR_DIE("WARC File: Invalid response->metadata position");
+			ERR_DIE("WARC File: Invalid response->metadata position");
 
-	    t_b = (size_t)((ptrdiff_t)(t_c - pos));
+		t_b = (size_t)((ptrdiff_t)(t_c - pos));
 		uri->response.byt = t_b;
 		byt += t_b;
 		lft -= t_b;
-	    uri->response.pos = pos;
+		uri->response.pos = pos;
 		pos  = t_c;
 
 		//----------------------------------------------------------
@@ -201,20 +201,20 @@ warc_analyze(warc_st *warc)
 			// if you want anything more robust, that's a bad assumption.
 
 			// +1 since end = final byte, not the byte after
-		    t_b = (size_t)((ptrdiff_t)(end - pos + 1));
+			t_b = (size_t)((ptrdiff_t)(end - pos + 1));
 			uri->metadata.byt = t_b;
 			byt += t_b;
 			lft -= t_b;
-		    uri->metadata.pos = pos;
+			uri->metadata.pos = pos;
 			pos  = end;
 			break;
 		}
 
-	    t_b = (size_t)((ptrdiff_t)(t_c - pos));
+		t_b = (size_t)((ptrdiff_t)(t_c - pos));
 		uri->metadata.byt = t_b;
 		byt += t_b;
 		lft -= t_b;
-	    uri->metadata.pos = pos;
+		uri->metadata.pos = pos;
 		pos  = t_c;
 
 	} while(pos <= end);
@@ -230,7 +230,7 @@ int
 warc_zstd_compress(warc_st *warc)
 {
 	if (DBG)print_header("Compressing warc file with zstd, "
-	                     "compression level: %d...", warc->zstd.level);
+						 "compression level: %d...", warc->zstd.level);
 
 	//--------------------------------------------------------------
 	// party time
@@ -262,8 +262,8 @@ warc_zstd_compress(warc_st *warc)
 	//--------------------------------------------------------------
 	// first, compress and write our warcinfo data
 	z_wrt = zstd_compress(warc, z_buf, z_lft,
-		                  warc->dat.doc.warcinfo.pos,
-		                  warc->dat.doc.warcinfo.byt);
+						  warc->dat.doc.warcinfo.pos,
+						  warc->dat.doc.warcinfo.byt);
 
 	// compressed. now set warcinfo vals
 	warc->zstd.warcinfo.off = 0;	// since it's the first block written
@@ -293,7 +293,7 @@ warc_zstd_compress(warc_st *warc)
 		//------------------------------
 		// first, the request
 		z_wrt = zstd_compress(warc, z_buf, z_lft,
-		                      u->request.pos, u->request.byt);
+							  u->request.pos, u->request.byt);
 		z->request.off = z_off;
 		z->request.byt = z_wrt;
 		z_off         += z_wrt;
@@ -303,22 +303,22 @@ warc_zstd_compress(warc_st *warc)
 		//------------------------------
 		// next, the response
 		z_wrt = zstd_compress(warc, z_buf, z_lft,
-		                      u->response.pos, u->response.byt);
+							  u->response.pos, u->response.byt);
 		z->response.off = z_off;
 		z->response.byt = z_wrt;
-		z_off          += z_wrt;
-		z_buf          += z_wrt;
-		z_lft          -= z_wrt;
+		z_off         += z_wrt;
+		z_buf         += z_wrt;
+		z_lft         -= z_wrt;
 
 		//------------------------------
 		// finally, the metadata
 		z_wrt = zstd_compress(warc, z_buf, z_lft,
-		                      u->metadata.pos, u->metadata.byt);
+							  u->metadata.pos, u->metadata.byt);
 		z->metadata.off = z_off;
 		z->metadata.byt = z_wrt;
-		z_off          += z_wrt;
-		z_buf          += z_wrt;
-		z_lft          -= z_wrt;
+		z_off         += z_wrt;
+		z_buf         += z_wrt;
+		z_lft         -= z_wrt;
 	}
 
 	warc->zstd.out.byt = z_off;
@@ -338,32 +338,32 @@ warc_zstd_write_files(warc_st *warc)
 {
 	FILE  *fp  = NULL;
 	size_t byt = 0;
-	int    ret = 0;
+	int	ret = 0;
 
 	//----------------------------------
 	if (DBG)print_header("Writing zstd-compressed warc zst "
-	                     "file to:\n\t%s\n\t...", warc->zstd.filename.zst);
+						 "file to:\n\t%s\n\t...", warc->zstd.filename.zst);
 
-    fp = fopen(warc->zstd.filename.zst, "w");
-    if (NULL == fp)
-    	ERR_DIE("Could not fopen() .zst file for writing");
+	fp = fopen(warc->zstd.filename.zst, "w");
+	if (NULL == fp)
+		ERR_DIE("Could not fopen() .zst file for writing");
 
-    byt = fwrite(warc->zstd.out.buf, 1, warc->zstd.out.byt, fp);
-    if (byt != warc->zstd.out.byt)
-    	ERR_DIE("Could not fwrite() .zst file for writing");
+	byt = fwrite(warc->zstd.out.buf, 1, warc->zstd.out.byt, fp);
+	if (byt != warc->zstd.out.byt)
+		ERR_DIE("Could not fwrite() .zst file for writing");
 
-    if (fclose(fp))
-    	ERR_DIE("Could not fclose() .zst file for writing");
+	if (fclose(fp))
+		ERR_DIE("Could not fclose() .zst file for writing");
 
 	if (DBG)print_flush("Done\n");
 
 	//----------------------------------
 	if (DBG)print_header("Writing zstd-compressed warc dat "
-	                     "file to:\n\t%s\n\t...", warc->zstd.filename.dat);
+						 "file to:\n\t%s\n\t...", warc->zstd.filename.dat);
 
-    fp = fopen(warc->zstd.filename.dat, "wb");
-    if (NULL == fp)
-    	ERR_DIE("Could not fopen() .zst.dat file for writing");
+	fp = fopen(warc->zstd.filename.dat, "wb");
+	if (NULL == fp)
+		ERR_DIE("Could not fopen() .zst.dat file for writing");
 
 	/*
 		output:
@@ -377,34 +377,34 @@ warc_zstd_write_files(warc_st *warc)
 				>	\t metadata \t offset \t bytes \n
 	*/
 
-    // total urls...
-    ret = fprintf(fp, "total urls\t%d\n", warc->dat.uri.cnt);
-    if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
+	// total urls...
+	ret = fprintf(fp, "total urls\t%d\n", warc->dat.uri.cnt);
+	if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
 
-    // warcinfo
-    ret = fprintf(fp, "warcinfo\t%zu\t%zu\n",
-                       warc->zstd.warcinfo.off, warc->zstd.warcinfo.byt);
-    if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
+	// warcinfo
+	ret = fprintf(fp, "warcinfo\t%zu\t%zu\n",
+					   warc->zstd.warcinfo.off, warc->zstd.warcinfo.byt);
+	if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
 
-    // loop through urls
-    for (int i = 0; i < warc->dat.uri.cnt; ++i)
-    {
-    	zstd_uri_st *u = &warc->zstd.uri[i];
-	    ret = fprintf(fp, "%.*s\n"				// URI
-	                  	  "\treq:\t%zu\t%zu\n"	// request;  offset, bytes
-	                  	  "\trsp:\t%zu\t%zu\n"	// response; offset, bytes
-	                  	  "\tmta:\t%zu\t%zu\n"	// metadata; offset, bytes
-	                  	  "\n",
-	                       (int  )warc->dat.uri.arr[i].uri.byt,
-	                       (char*)warc->dat.uri.arr[i].uri.pos,
-	                       u->request.off,  u->request.byt,
-	                       u->response.off, u->response.byt,
-	                       u->metadata.off, u->metadata.byt);
-	    if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
-    }
+	// loop through urls
+	for (int i = 0; i < warc->dat.uri.cnt; ++i)
+	{
+		zstd_uri_st *u = &warc->zstd.uri[i];
+		ret = fprintf(fp, "%.*s\n"				// URI
+						  "\treq:\t%zu\t%zu\n"	// request;  offset, bytes
+						  "\trsp:\t%zu\t%zu\n"	// response; offset, bytes
+						  "\tmta:\t%zu\t%zu\n"	// metadata; offset, bytes
+						  "\n",
+						   (int  )warc->dat.uri.arr[i].uri.byt,
+						   (char*)warc->dat.uri.arr[i].uri.pos,
+						   u->request.off,  u->request.byt,
+						   u->response.off, u->response.byt,
+						   u->metadata.off, u->metadata.byt);
+		if (ret < 0) ERR_DIE("Could not fprintf() .zst.dat");
+	}
 
-    if (fclose(fp))
-    	ERR_DIE("Could not fclose() .zst.dat file after writing");
+	if (fclose(fp))
+		ERR_DIE("Could not fclose() .zst.dat file after writing");
 
 	if (DBG)print_flush("Done\n");
 
@@ -437,7 +437,7 @@ warc_fin(warc_st *warc)
 {
 	mmap_fin(&warc->file);
 
-    free(warc->zstd.out.buf);
+	free(warc->zstd.out.buf);
 	free(warc->dat.uri.arr);
 	free(warc->zstd.uri);
 

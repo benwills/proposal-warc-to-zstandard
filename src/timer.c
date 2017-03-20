@@ -24,8 +24,8 @@ timer_diff_print(timer_st *timer)
 {
 	// just in case...
 	if (   0 == timer->stop
-	    || 0 == timer->start
-	    || timer->stop < timer->start)
+		|| 0 == timer->start
+		|| timer->stop < timer->start)
 	{
 		printf("\nERR: TIMER: invalid timer start and/or stop time\n\n");
 		fflush(stdout);

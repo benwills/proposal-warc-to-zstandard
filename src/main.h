@@ -25,7 +25,7 @@
 #include <pthread.h>
 
 #define ZSTD_STATIC_LINKING_ONLY	// ZSTD_findDecompressedSize
-#include <zstd.h>     	 			// presumes zstd library is installed
+#include <zstd.h>	 	 			// presumes zstd library is installed
 
 
 //------------------------------------------------------------------------------
@@ -39,7 +39,7 @@
 //
 
 // consider as an optarg...
-#define DIR_ZST     "../warc_zst/"
+#define DIR_ZST	 "../warc_zst/"
 #define DIR_ZST_DAT "../warc_zst_dat/"
 
 
@@ -52,7 +52,7 @@
 	#define DBG 1
 #endif
 
-#define DBG_FFL do{if(DBG){printf("DBG: FFL: [%s] [%s] [%d]\n",        \
+#define DBG_FFL do{if(DBG){printf("DBG: FFL: [%s] [%s] [%d]\n",		\
 				__FILE__, __func__, __LINE__);fflush(stdout);}}while(0);
 
 //--------------------------------------
@@ -81,12 +81,12 @@
 
 #define ERR_RST() (errno == 0 ? "None" : strerror(errno))
 
-#define ERR_DIE(MSG, ...)                                                      \
-        do{                                                                    \
-            fprintf(stderr, "FATAL: (%s:%d:%s: errno: %s)\n\t" MSG "\n",       \
-                    __FILE__, __LINE__, __func__, ERR_RST(), ##__VA_ARGS__);   \
-            exit(EXIT_FAILURE);                                                \
-        }while(0);
+#define ERR_DIE(MSG, ...)													   \
+		do{																	   \
+			fprintf(stderr, "FATAL: (%s:%d:%s: errno: %s)\n\t" MSG "\n",	   \
+					__FILE__, __LINE__, __func__, ERR_RST(), ##__VA_ARGS__);   \
+			exit(EXIT_FAILURE);												   \
+		}while(0);
 
 //--------------------------------------
 //
@@ -121,14 +121,14 @@ timer_st
 typedef struct
 mmap_st
 {
-    char       *fnm;					// must point to null-termed string
-    struct stat dat;					// fnm file data
-    void       *mem;					// mmap()ed pointer
+	char       *fnm;					// must point to null-termed string
+	struct stat dat;					// fnm file data
+	void       *mem;					// mmap()ed pointer
 
 										// helpers...
-    size_t      byt;
-    void       *beg;
-    void       *end;					// last byte
+	size_t  byt;
+	void   *beg;
+	void   *end;					// last byte
 } mmap_st;
 
 //--------------------------------------
@@ -166,13 +166,13 @@ warc_blk_st
 typedef struct 							// warc uri data
 warc_uri_st
 {
-	#define WARC_STR_BEG_REQ     		"WARC/1.0\r\nWARC-Type: request\r\n"
+	#define WARC_STR_BEG_REQ	 		"WARC/1.0\r\nWARC-Type: request\r\n"
 	warc_blk_st request;				// warc request header
 
-	#define WARC_STR_BEG_RSP     		"WARC/1.0\r\nWARC-Type: response\r\n"
+	#define WARC_STR_BEG_RSP	 		"WARC/1.0\r\nWARC-Type: response\r\n"
 	warc_blk_st response;				// warc response header + HTTP data
 
-	#define WARC_STR_BEG_MTA     		"WARC/1.0\r\nWARC-Type: metadata\r\n"
+	#define WARC_STR_BEG_MTA	 		"WARC/1.0\r\nWARC-Type: metadata\r\n"
 	warc_blk_st metadata;				// warc metadata header
 
 	#define WARC_STR_HDR_URI 			"WARC-Target-URI: "
@@ -196,7 +196,7 @@ typedef struct 							// master warc struct
 warc_st
 {
 	char filename[PATH_MAX + 1];		// from user input; option -I
-	mmap_st     file;
+	mmap_st	 file;
 	warc_run_et run;					// (de)/compress; user input; -c/-d
 
 	struct {
@@ -207,16 +207,16 @@ warc_st
 
 		struct {
 			warc_uri_st *arr;
-			int          cnt;
+			int		  cnt;
 		} uri;
 	} dat;
 
 	struct {
 		timer_st timer;
-		int      level;					// compression level; user input; -L
+		int	     level;					// compression level; user input; -L
 
 		struct {
-			int         use;
+			int	        use;
 			ZSTD_CDict *c;				// compression dictionary
 			ZSTD_DDict *d;				// decompression dictionary
 		} dict;
