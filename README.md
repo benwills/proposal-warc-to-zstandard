@@ -1,4 +1,4 @@
-# WARC; Gzip to Zstandard Compression Proposal
+# WARC: Gzip to Zstandard Compression Proposal
 
 ---
 
@@ -251,8 +251,9 @@ This was written early in the coding process. Some specifics have likely changed
 
 
 ---
-    this does loop through the file twice. i've done this because this structure is useful for me for some other things i do with this datat. if someone were to create a more optimized version of this, it would be very easy to go through the file only once and likely get a fair performance increase.
+    this does loop through the file twice. i've done this because this
+    structure is useful for me for some other things i do with this data.
+    if someone were to create a more optimized version of this, it would
+    be very easy to go through the file only once and likely get a fair
+    performance increase.
 
-    this also makes use of fprintf() for some writing...which can be quite slow
-
-    TODO: use dictionary
