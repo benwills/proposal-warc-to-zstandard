@@ -46,15 +46,15 @@ If you were to select the 534 bytes of that file, beginning at byte 517355, and 
 
 ## Zstandard
 
-Zstandard is a new(ish) compression algorithm by Yann Collet; the author of LZ4, a common compression algorithm found in ZFS, and xxHash64, one of the fastest and most robust 64-bit non-cryptographic hash functions out today.
+Zstandard is a new(ish) compression algorithm by Yann Collet; the author of LZ4, a common compression algorithm also found in ZFS, and xxHash64, one of the fastest and most robust 64-bit non-cryptographic hash functions out today.
 
-While Yann was working on Zstandard, he was hired by Facebook. Zstandard went on to be released by Facebook at version 1.0 and has been widely used by them in production for some time.
+While Yann was working on Zstandard, he was hired by Facebook. Zstandard went on to be released by Facebook at version 1.0 and is now widely used by them in production.
 
-Zstandard is designed for very fast decompression, and pretty good compression. By "pretty good," I mean that the PAQ series of algorithms generally have the [highest compression ratios](http://mattmahoney.net/dc/text.html), but have far greater compression and decompression times.
+Zstandard is designed for very fast decompression, and pretty good compression. By "pretty good," I mean that the PAQ series of algorithms generally have the [highest compression ratios](http://mattmahoney.net/dc/text.html), at the cost of far greater compression and decompression times.
 
-In my testing, of which there is more data further below, I was able to achive a random WARC file compression size of 793,764,785 bytes (using a compression level of 8, taking approximately 3 minutes) vs Gzip's compressed size of 959,016,011.
+In my testing, of which there is more data further below, I was able to achive a random WARC file compression size of 793,764,785 bytes vs Gzip's compressed size of 959,016,011.
 
-This is about 82.7% of the Gzipped size, used Zstandard's compression level of 8, took about 3 minutes and 20 seconds on an Intel i3-4130 CPU @ 3.40GHz, and created a new compression block for each "WARC-Type" of request, response, and metadata. Further compression should be achievable if those three WARC Types should actually be compressed in one block.
+This is about 82.7% of the Gzipped size. Using Zstandard's compression level of 8, it took about 3 minutes and 20 seconds on an Intel i3-4130 CPU @ 3.40GHz, while creating a new compression block for each "WARC-Type" of request, response, and metadata. Further compression should be achievable if those three WARC Types should actually be compressed in one block.
 
 ## Compression Dictionary
 
@@ -96,8 +96,8 @@ The practical runtime considerations here are:
 	* Setting a larger ```--maxdict``` size also helps.
 
 2) Compression levels
-	* The higher the compression level, more exponentially longer it takes to compress. Training times and final sizes for various levels using a different dictionary than I've referenced above.
-	* For reference, the Gzipped file was 949,865,238 bytes:
+	* The higher the compression level, the longer it takes to compress. Note that the training times and final sizes for various levels in the table below use a different dictionary than I've referenced above.
+	* For comparison, the Gzipped file was 949,865,238 bytes:
 
 Compression Level | Compression Time | Compressed Size
 ------------|-------------------|--------------
@@ -127,7 +127,7 @@ Level 22	|	2960s, 894ms	|	735,042,474
 
 Clearly, there is a computational threshold that makes sense for a project like the Common Crawl to stay under at the compression process. But these numbers should be useful for refernce when comparing to Gzip, which I expect to be somewhere around Compression Level 8 for Zstandard.
 
-If that compression time is similar it would offer about 11% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to downloading more than 8 days faster.
+If that compression time is similar it would offer about 17% savings in overall size. This would bring the February 2017 crawl's WARC files down from 55.8 terabytes to around 46.5 terabytes. On a 100Mbit/s connection, this equates to downloading more than 8 days faster.
 
 ## Next Steps
 
